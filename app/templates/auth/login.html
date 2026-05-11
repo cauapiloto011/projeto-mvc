@@ -9,14 +9,17 @@
     <h1>Entrar no sistema</h1>
 
     <from action="/auth/login" method="post ">
+        Nome: <input type="nome" name="nome" >
+        <br><br>
         E-maill: <input type="email" name="email" required>
         <br><br>
         Senha: <input type="passaword" name="senha_hash" >
         <br>
 
-        {% if erro %}
-            <p style="color: red;">{{erro}}<p> 
-        {% endif %}
+
+
+        
+
         <button type="submit">Entrar</button>
     </from>
 

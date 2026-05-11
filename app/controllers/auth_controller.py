@@ -39,7 +39,7 @@ def fazer_cadastro(
     request: Request,
     nome: str = Form(...),
     email: str = Form(...),
-    senha: str = dorm(...),
+    senha: str = Form(...),
     db: Session = Depends(get_db)
 ):
     
@@ -58,4 +58,4 @@ def fazer_cadastro(
     db.add(novo_usuario)
     db.commit()
 
-    return RedirectResponse(url="/auth/login" status_code=302)
+    return RedirectResponse(url="/auth/login?cadastro=ok", status_code=302)
