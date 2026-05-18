@@ -8,12 +8,12 @@
 <body>
     <h1>criar conta</h1>
 
-    <from action="/auth/cadastro" method="post ">
-        Nome: <input trype="texte" name="nome">
+    <form action="/auth/cadastro" method="post">
+        Nome: <input type="text" name="nome">
         <br>
         E-maill: <input type="email" name="email" required>
         <br>
-        Senha: <input type="passaword" name="senha" >
+        Senha: <input type="password" name="senha" >
         <br>
 
         {% if erro %}
@@ -21,7 +21,7 @@
         {% endif %}
         
         <button type="submit">cadastrar</button>
-    </from>
+    </form>
 
 
     <p> já temconta? <a href="/auth/login">Entrar</a></p>

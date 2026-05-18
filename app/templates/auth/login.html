@@ -8,12 +8,10 @@
 <body>
     <h1>Entrar no sistema</h1>
 
-    <from action="/auth/login" method="post ">
-        Nome: <input type="nome" name="nome" >
-        <br><br>
+    <form action="/auth/login" method="post">
         E-maill: <input type="email" name="email" required>
         <br><br>
-        Senha: <input type="passaword" name="senha_hash" >
+        Senha: <input type="passaword" name="senha">
         <br>
 
 
@@ -21,7 +19,7 @@
         
 
         <button type="submit">Entrar</button>
-    </from>
+    </form>
 
 
     <p> já tem conta? <a href="/auth/login">cadastre-se</a></p>
